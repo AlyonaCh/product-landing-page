@@ -1,0 +1,313 @@
+:root{
+    --main:#f5f5f5;
+    --main-light:#eaeaea;
+    --main-dark: #454545;
+    --main-white:#ffffff;
+    --main-medium: #e8bb60;
+    --main-yellow-light: #FFFF92;
+    --main-purple-light: #C488E5;
+    --main-green-light: #D6FA8F;
+    --main-yellow-medium: #FFFF65;
+    --main-purple-medium: #A95BD5;
+    --main-green-medium: #C5F761;
+    
+}
+
+@media screen and (max-width: 986px){
+    body{
+        padding: 0px 0px;
+    }
+    #app{
+        margin: 0px;
+    }
+    header{
+        flex-wrap: wrap;
+    }
+    .main__tagline p{
+        left: 0%;
+        top: 0%;
+    }
+    .benefits{
+        padding: 0px;
+    }
+    iframe{
+        width: 560px;
+        height: 315px;
+    }
+    .footer__contacts{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 987px){
+    body{
+        padding: 0px 15%;
+    }
+    #app{
+        margin: 0px 10%;
+    }
+    header{
+        flex-wrap: nowrap;
+    }
+    .main__tagline p{
+        left: 50%;
+        top: 60%;
+    }
+    .benefits{
+        padding: 70px;
+    }
+    iframe{
+        width: 560px;
+        height: 315px;
+    }
+    .footer__contacts{
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 562px){
+    iframe{
+        width: 320px;
+        height: 160px;
+    }
+}
+
+body{
+    margin: 0px auto;
+    color: var(--main-dark);
+    font-family: 'Playfair Display', serif;
+}
+
+#app{
+    background-color: var(--main);
+    font-size: 20px;
+}
+
+a{
+    color: var(--main-dark);
+}
+
+a:hover{
+    color: var(--main-medium);
+}
+
+header{
+    position: sticky;
+    background-color: var(--main);
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header__logo{
+    margin-left: 10%;
+    position: relative;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img{
+    width: 40px;
+    height: auto;
+}
+
+.header__logo p{
+    margin: 0px;
+    font-weight: bold;
+}
+
+header nav{
+    margin-right: 20px;
+}
+
+header nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>div:nth-child(odd){
+    background-color: var(--main-light);
+}
+
+.main__tagline{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background:linear-gradient(
+        0deg, rgb(81 81 81) 0%,rgba(0, 0, 255, 0) 30%), url(imajes/pexels-alesia-kozik-7796223.jpg);
+    background-size: cover;
+    /* background-position: 0 -75px; */
+    /* box-shadow: inset 0px -50px 55px rgb(0 0 0 / 50%); */
+}
+
+.main__tagline p{
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--main-white)
+    /* text-shadow: 1px 1px 2px var(--main-medium); */
+}
+
+.main__best{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0px;
+}
+
+.main__best>div{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 0px;
+}
+
+.main__best>div:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.main__best img{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+} 
+
+.main__best h3{
+    margin: 10px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.best__oil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.best__oil img{
+    width: 100px;
+    height: auto;
+    mix-blend-mode: multiply;
+} 
+
+.main__benefits{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.main__benefits img{
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+}
+
+.benefits{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.benefits>div{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-medium);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.benefits img{
+    width: 50px;
+    height: 50px;
+}
+
+.benefits p{
+    padding: 10px;
+}
+
+iframe{
+    margin: 70px 0px;
+    object-fit: cover;
+}
+
+.main__form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0px;
+}
+
+.main__form h3{
+    margin-top: 0px;
+}
+
+.main__form input[type="submit"]{
+    background-color: var(--main-medium);
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bolder;
+    color: var(--main-light);
+    border: 2px solid var(--main-light);
+}
+
+.main__form input[type="submit"]:hover{
+    cursor: pointer;
+    color: var(--main-dark);
+}
+
+.main__form input[type="email"]{
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bolder;
+    color: var(--main-light);
+    border: 2px solid var(--main-medium);
+}
+
+footer{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7em;
+    background-color: var(--main-dark);
+    color: var(--main);
+}
+
+.footer__contacts{
+    display: flex;
+}
+
+.footer__contacts div{
+    display: flex;
+}
+footer a{
+    color: var(--main);
+}
+
+.footer__contacts img{
+    width: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+    filter: invert(1);
+}
